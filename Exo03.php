@@ -1,23 +1,5 @@
 <?php
 
-    $title = $_GET['title'];
-    $duration = $_GET['duration'];
-    $yearStart = $_GET['year_start'];
-    $gender = $_GET['gender'];
-    $type = $_GET['type'];
-
-
-if (!empty($type)) {
-            $sqlType = "
-                SELECT *
-                FROM magazine
-                WHERE last_name=:type
-            ";
-    $stmt = $conn->prepare($sqlAuthor);
-    $stmt->bindParam("last_name", $author);
-    $stmt->execute();
-    $artistName = $stmt->fetchAll();
-    return json_encode(["artistName" => $artistName]);
 
 
 
